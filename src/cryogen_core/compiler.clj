@@ -231,7 +231,7 @@
   [file-uri {:keys [clean-urls?]} data]
   (if clean-urls?
     (cryogen-io/create-file-recursive (cryogen-io/path file-uri "index.html") data)
-    (cryogen-io/create-file file-uri data)))
+    (cryogen-io/create-file-recursive file-uri data)))
 
 (defn- print-debug-info [data]
   (println "DEBUG:")
